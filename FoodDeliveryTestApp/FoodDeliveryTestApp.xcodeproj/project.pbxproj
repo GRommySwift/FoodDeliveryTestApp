@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */; };
 		30A3F3062BE0FAF200C4079A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3052BE0FAF200C4079A /* Colors.swift */; };
+		30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3092BE1000D00C4079A /* Coordinator.swift */; };
 		30AC22C82BDFAF2000322749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22C72BDFAF2000322749 /* AppDelegate.swift */; };
 		30AC22CA2BDFAF2000322749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22C92BDFAF2000322749 /* SceneDelegate.swift */; };
 		30AC22CC2BDFAF2000322749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22CB2BDFAF2000322749 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		30A3F3052BE0FAF200C4079A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		30A3F3092BE1000D00C4079A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30AC22C42BDFAF2000322749 /* FoodDeliveryTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AC22C72BDFAF2000322749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30AC22C92BDFAF2000322749 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30A3F3072BE0FFF100C4079A /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				30A3F3082BE0FFFF00C4079A /* Coordinator */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		30A3F3082BE0FFFF00C4079A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30A3F3092BE1000D00C4079A /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		30AC22BB2BDFAF2000322749 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +104,7 @@
 		30AC22C62BDFAF2000322749 /* FoodDeliveryTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				30A3F3072BE0FFF100C4079A /* NavigationLayer */,
 				30AC22DB2BDFB34100322749 /* Resources */,
 				30AC22C72BDFAF2000322749 /* AppDelegate.swift */,
 				30AC22C92BDFAF2000322749 /* SceneDelegate.swift */,
@@ -233,6 +252,7 @@
 				30AC22FC2BDFB54900322749 /* UIFont+Extension.swift in Sources */,
 				30AC22CA2BDFAF2000322749 /* SceneDelegate.swift in Sources */,
 				30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */,
+				30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
