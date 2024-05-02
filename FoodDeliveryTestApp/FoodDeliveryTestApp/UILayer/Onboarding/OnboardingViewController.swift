@@ -13,6 +13,7 @@ class OnboardingViewController: UIViewController {
     // MARK: - Properties
     
     private var pages = [OnboardingPartViewController]()
+    private var currentPageIndex = 0
     
     // MARK: - Views
     
@@ -63,7 +64,7 @@ private extension OnboardingViewController {
     }
 }
 
-    // MARK: - Layout
+// MARK: - Layout
 private extension OnboardingViewController {
     
     func setuplayout() {
@@ -115,12 +116,12 @@ private extension OnboardingViewController {
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             bottomButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-    
+        
     }
 }
-    
-    
-    
+
+
+
 
 
 
@@ -149,11 +150,17 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {
             pageControl.currentPage = index
-            let page = pages[index]
-            let title = page.buttonText
-            bottomButton.setTitle(title, for: .normal)
-            
         }
     }
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            pageControl.currentPage = currentPageIndex
+            let page = pages[currentPageIndex]
+            let title = page.buttonText
+            bottomButton.setTitle(title, for: .normal)
+        }
+    }
 }
+
+
