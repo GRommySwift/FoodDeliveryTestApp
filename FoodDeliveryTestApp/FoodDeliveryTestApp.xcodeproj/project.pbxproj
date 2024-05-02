@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		309FE5A02BE3E1A40036B62F /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FE59F2BE3E1A40036B62F /* UserStorage.swift */; };
 		30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */; };
 		30A3F3062BE0FAF200C4079A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3052BE0FAF200C4079A /* Colors.swift */; };
 		30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3092BE1000D00C4079A /* Coordinator.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		309FE59F2BE3E1A40036B62F /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		30A3F3052BE0FAF200C4079A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		30A3F3092BE1000D00C4079A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		309FE59E2BE3E1910036B62F /* ServicesLayer */ = {
+			isa = PBXGroup;
+			children = (
+				309FE59F2BE3E1A40036B62F /* UserStorage.swift */,
+			);
+			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
 		30A3F3072BE0FFF100C4079A /* NavigationLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		30AC22C62BDFAF2000322749 /* FoodDeliveryTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				309FE59E2BE3E1910036B62F /* ServicesLayer */,
 				30C746242BE275380063C755 /* UILayer */,
 				30A3F3072BE0FFF100C4079A /* NavigationLayer */,
 				30AC22DB2BDFB34100322749 /* Resources */,
@@ -314,6 +325,7 @@
 				30C7461A2BE26A0E0063C755 /* HomeCoordinator.swift in Sources */,
 				30C746232BE26BA90063C755 /* TabBarController.swift in Sources */,
 				30C7462B2BE27FBD0063C755 /* OnboardingPartViewController.swift in Sources */,
+				309FE5A02BE3E1A40036B62F /* UserStorage.swift in Sources */,
 				30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */,
 				30C746292BE275D70063C755 /* OnboardingViewPresenter.swift in Sources */,
 				30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */,

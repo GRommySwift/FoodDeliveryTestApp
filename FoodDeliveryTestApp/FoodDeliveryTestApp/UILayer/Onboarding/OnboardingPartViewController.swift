@@ -8,7 +8,7 @@
 import UIKit
 
 class OnboardingPartViewController: UIViewController {
-
+    
     // MARK: - Properties
     var imageToShow: UIImage? {
         didSet {
@@ -34,7 +34,7 @@ class OnboardingPartViewController: UIViewController {
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setuplayout()
@@ -66,14 +66,14 @@ private extension OnboardingPartViewController {
     func setupTitle() {
         
         view.addSubview(titleLabel)
-               titleLabel.translatesAutoresizingMaskIntoConstraints = false
-               titleLabel.font = .Roboto.bold.size(of: 24)
-               titleLabel.textColor = AppColors.white
-               titleLabel.textAlignment = .center
-               NSLayoutConstraint.activate([
-                   titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
-                   titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-               ])
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = .Roboto.bold.size(of: 24)
+        titleLabel.textColor = AppColors.white
+        titleLabel.textAlignment = .center
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
     func setupDescription() {
         view.addSubview(descriptionLabel)
