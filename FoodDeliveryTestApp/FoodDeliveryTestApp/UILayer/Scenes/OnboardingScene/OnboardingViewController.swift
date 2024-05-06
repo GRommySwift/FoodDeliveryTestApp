@@ -20,7 +20,7 @@ class OnboardingViewController: UIViewController {
     private var pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl()
     var viewOutput: OnboardingViewOutput!
-    private let bottomButton = UIButton()
+    private let bottomButton = FDButton()
     
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController](), viewOutput: OnboardingViewOutput!) {
         super.init(nibName: nil, bundle: nil)
@@ -45,15 +45,15 @@ private extension OnboardingViewController {
         case 0:
             pageControl.currentPage = 1
             pageViewController.setViewControllers([pages[1]], direction: .forward, animated: true, completion: nil)
-            bottomButton.setTitle(pages[1].buttonText, for: .normal)
+            bottomButton.setTitle(pages[1].buttonText)
         case 1:
             pageControl.currentPage = 2
             pageViewController.setViewControllers([pages[2]], direction: .forward, animated: true, completion: nil)
-            bottomButton.setTitle(pages[2].buttonText, for: .normal)
+            bottomButton.setTitle(pages[2].buttonText)
         case 2:
             pageControl.currentPage = 3
             pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true, completion: nil)
-            bottomButton.setTitle(pages[3].buttonText, for: .normal)
+            bottomButton.setTitle(pages[3].buttonText)
         case 3:
             print("Exit")
             viewOutput.onboardingFinish()
@@ -89,7 +89,7 @@ private extension OnboardingViewController {
         pageControl.currentPage = 0
         let page = pages[0]
         let title = page.buttonText
-        bottomButton.setTitle(title, for: .normal)
+        bottomButton.setTitle(title)
         
         pageControl.isUserInteractionEnabled = false
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -104,11 +104,9 @@ private extension OnboardingViewController {
         
         view.addSubview(bottomButton)
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
-        bottomButton.backgroundColor = AppColors.grey
-        bottomButton.titleLabel?.font = .Roboto.bold.size(of: 18)
-        bottomButton.setTitleColor(AppColors.black, for: .normal)
-        bottomButton.layer.cornerRadius = 24
-        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        bottomButton.action = buttonPressed
+        bottomButton.scheme = .gray
+
         
         NSLayoutConstraint.activate([
             bottomButton.bottomAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: -44),
@@ -120,30 +118,18 @@ private extension OnboardingViewController {
     }
 }
 
-
-
-
-
-
 // MARK: - UIPageViewControllerDataSource Delegate
 extension OnboardingViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
         guard let currentIndex = pages.firstIndex(of: viewController as! OnboardingPartViewController), currentIndex > 0 else { return nil }
-        
         return pages[currentIndex - 1]
-        
     }
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
         guard let currentIndex = pages.firstIndex(of: viewController as! OnboardingPartViewController), currentIndex < pages.count - 1 else { return nil }
-        
         return pages[currentIndex + 1]
-        
     }
-    
 }
+
 // MARK: - UIPageViewControllerDelegate Delegate
 extension OnboardingViewController: UIPageViewControllerDelegate {
     
@@ -158,7 +144,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
             pageControl.currentPage = currentPageIndex
             let page = pages[currentPageIndex]
             let title = page.buttonText
-            bottomButton.setTitle(title, for: .normal)
+            bottomButton.setTitle(title)
         }
     }
 }
