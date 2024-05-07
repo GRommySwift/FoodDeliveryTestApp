@@ -32,6 +32,8 @@
 		30AC22F82BDFB4CF00322749 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30AC22EB2BDFB4CF00322749 /* Roboto-Thin.ttf */; };
 		30AC22F92BDFB4CF00322749 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30AC22EC2BDFB4CF00322749 /* Roboto-Black.ttf */; };
 		30AC22FC2BDFB54900322749 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22FB2BDFB54900322749 /* UIFont+Extension.swift */; };
+		30AF8E6A2BEA8444007CA80D /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF8E692BEA8444007CA80D /* FDTextField.swift */; };
+		30AF8E6C2BEA872A007CA80D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AF8E6B2BEA872A007CA80D /* LoginPresenter.swift */; };
 		30C746162BE25DDE0063C755 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C746152BE25DDE0063C755 /* AppCoordinator.swift */; };
 		30C746182BE25ECE0063C755 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C746172BE25ECE0063C755 /* OnboardingCoordinator.swift */; };
 		30C7461A2BE26A0E0063C755 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C746192BE26A0E0063C755 /* HomeCoordinator.swift */; };
@@ -43,7 +45,7 @@
 		30C746292BE275D70063C755 /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C746282BE275D70063C755 /* OnboardingViewPresenter.swift */; };
 		30C7462B2BE27FBD0063C755 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7462A2BE27FBD0063C755 /* OnboardingPartViewController.swift */; };
 		30F7C2732BE3EEBA001A4ED0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7C2722BE3EEBA001A4ED0 /* LoginViewController.swift */; };
-		30F7C2782BE3EF48001A4ED0 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7C2772BE3EF48001A4ED0 /* BottomView.swift */; };
+		30F7C2782BE3EF48001A4ED0 /* FDBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7C2772BE3EF48001A4ED0 /* FDBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		30AC22EB2BDFB4CF00322749 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		30AC22EC2BDFB4CF00322749 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		30AC22FB2BDFB54900322749 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		30AF8E692BEA8444007CA80D /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
+		30AF8E6B2BEA872A007CA80D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		30C746152BE25DDE0063C755 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		30C746172BE25ECE0063C755 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		30C746192BE26A0E0063C755 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		30C746282BE275D70063C755 /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		30C7462A2BE27FBD0063C755 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		30F7C2722BE3EEBA001A4ED0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		30F7C2772BE3EF48001A4ED0 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		30F7C2772BE3EF48001A4ED0 /* FDBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				30505F402BE95E93005AE4B7 /* FDButton.swift */,
+				30AF8E692BEA8444007CA80D /* FDTextField.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -277,7 +282,6 @@
 				30F7C2762BE3EF31001A4ED0 /* Presenters */,
 				30F7C2752BE3EF2B001A4ED0 /* Controllers */,
 				30F7C2742BE3EF24001A4ED0 /* Views */,
-				30F7C2722BE3EEBA001A4ED0 /* LoginViewController.swift */,
 			);
 			path = AuthScene;
 			sourceTree = "<group>";
@@ -285,7 +289,7 @@
 		30F7C2742BE3EF24001A4ED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				30F7C2772BE3EF48001A4ED0 /* BottomView.swift */,
+				30F7C2772BE3EF48001A4ED0 /* FDBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +297,7 @@
 		30F7C2752BE3EF2B001A4ED0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				30F7C2722BE3EEBA001A4ED0 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 		30F7C2762BE3EF31001A4ED0 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				30AF8E6B2BEA872A007CA80D /* LoginPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				30C746182BE25ECE0063C755 /* OnboardingCoordinator.swift in Sources */,
 				30C746162BE25DDE0063C755 /* AppCoordinator.swift in Sources */,
 				30C7461C2BE26A750063C755 /* OrderCoordinator.swift in Sources */,
+				30AF8E6A2BEA8444007CA80D /* FDTextField.swift in Sources */,
 				30C746272BE275970063C755 /* OnboardingViewController.swift in Sources */,
 				30F7C2732BE3EEBA001A4ED0 /* LoginViewController.swift in Sources */,
 				30AC22CA2BDFAF2000322749 /* SceneDelegate.swift in Sources */,
@@ -401,11 +408,12 @@
 				30C7461E2BE26B4B0063C755 /* ListCoordinator.swift in Sources */,
 				30C7461A2BE26A0E0063C755 /* HomeCoordinator.swift in Sources */,
 				30C746232BE26BA90063C755 /* TabBarController.swift in Sources */,
+				30AF8E6C2BEA872A007CA80D /* LoginPresenter.swift in Sources */,
 				30C7462B2BE27FBD0063C755 /* OnboardingPartViewController.swift in Sources */,
 				309FE5A02BE3E1A40036B62F /* UserStorage.swift in Sources */,
 				309FE5A32BE3E6600036B62F /* SceneFactory.swift in Sources */,
 				30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */,
-				30F7C2782BE3EF48001A4ED0 /* BottomView.swift in Sources */,
+				30F7C2782BE3EF48001A4ED0 /* FDBottomView.swift in Sources */,
 				30505F412BE95E93005AE4B7 /* FDButton.swift in Sources */,
 				30C746292BE275D70063C755 /* OnboardingViewPresenter.swift in Sources */,
 				30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */,
