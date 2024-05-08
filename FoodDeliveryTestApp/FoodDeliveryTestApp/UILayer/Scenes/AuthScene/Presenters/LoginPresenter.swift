@@ -48,11 +48,11 @@ extension LoginPresenter: LoginViewOutput {
     }
     
     func goToSignIn() {
-        
+        coordinator?.showSignInFlow()
     }
     
     func goToSignUp() {
-        
+        coordinator?.showSignUpFlow()
     }
     
     func goToForhotPass() {

@@ -13,14 +13,11 @@ class AppCoordinator: Coordinator {
     private let factory = SceneFactory.self
     
     override func start() {
-//        if userStorage.passedOnboarding {
-//            showMainFlow()
-//        } else {
-//           showOnboardingFlow()
-//        }
-        let loginPresenter = LoginPresenter(coordinator: self)
-        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
-        navigationController?.pushViewController(loginVC, animated: true)
+        if userStorage.passedOnboarding {
+            showAutFlow()
+        } else {
+           showOnboardingFlow()
+        }
     }
     
     override func finish() {
@@ -43,7 +40,27 @@ private extension AppCoordinator {
         let tabBarControler = factory.makeMainFlow(coordinator: self, finishDelegate: self)
         navigationController.pushViewController(tabBarControler, animated: true)
     }
+    
+    func showAutFlow() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeAuthScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
 
+    // MARK: - Methods
+
+extension AppCoordinator {
+    func showSignInFlow() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignInScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    func showSignUpFlow() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignUpScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 extension AppCoordinator: CoordinatorFinishDelegate {
@@ -52,7 +69,7 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         switch childCoordinator.type {
         case .onBoarding:
             navigationController?.viewControllers.removeAll()
-            showMainFlow()
+            showAutFlow()
         case .app:
             return
         default:
