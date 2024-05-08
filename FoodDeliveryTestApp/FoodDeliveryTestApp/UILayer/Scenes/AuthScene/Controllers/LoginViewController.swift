@@ -96,6 +96,7 @@ private extension LoginViewController {
             setupTitleLAbel()
             setupSignInButton()
             setupForgotLabel()
+            setupNavigationBar()
         case .signUp:
             setupBottomView()
             setupStack()
@@ -105,10 +106,16 @@ private extension LoginViewController {
             setupTitleLAbel()
             setupSignInButton()
             setupForgotLabel()
+            setupNavigationBar()
         }
         
     }
-    
+    func setupNavigationBar() {
+        let backImage = UIImage(named: "back")
+        let backButtonItem = UIBarButtonItem(image: backImage, style: .plain, target: navigationController, action: #selector(navigationController?.popViewController(animated:)))
+        navigationItem.leftBarButtonItem = backButtonItem
+        navigationItem.leftBarButtonItem?.tintColor = AppColors.black
+    }
     func setupStack() {
         view.addSubview(verticalStack)
         verticalStack.translatesAutoresizingMaskIntoConstraints = false

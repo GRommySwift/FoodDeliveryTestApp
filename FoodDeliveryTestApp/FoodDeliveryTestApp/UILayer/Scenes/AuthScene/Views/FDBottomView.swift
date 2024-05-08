@@ -67,11 +67,13 @@ class FDBottomView: UIView {
         self.addSubview(view2)
         view2.translatesAutoresizingMaskIntoConstraints = false
         view2.image = UIImage(named: "eat.pdf")
+        view2.contentMode = .scaleAspectFill
+        
         
         NSLayoutConstraint.activate([
             view2.topAnchor.constraint(equalTo: view1.bottomAnchor, constant: 18),
-            view2.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -60),
-            view2.heightAnchor.constraint(equalToConstant: 150),
+            view2.leftAnchor.constraint(equalTo: self.leftAnchor),
+            view2.heightAnchor.constraint(equalToConstant: 160),
             view2.widthAnchor.constraint(equalToConstant: 282)
         ])
     }
