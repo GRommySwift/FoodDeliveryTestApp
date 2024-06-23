@@ -11,6 +11,7 @@ enum CoordinatorType {
     case app
     case onBoarding
     case home
+    case login
     case order
     case list
     case profile

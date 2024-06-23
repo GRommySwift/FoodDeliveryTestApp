@@ -32,7 +32,8 @@ private extension AppCoordinator {
     
     func showOnboardingFlow() {
         guard let navigationController = navigationController else { return }
-        factory.makeOnboardingFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        let onboardingCoordinator = factory.makeOnboardingFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        onboardingCoordinator.start()
     }
     
     func showMainFlow() {
@@ -43,25 +44,12 @@ private extension AppCoordinator {
     
     func showAutFlow() {
         guard let navigationController = navigationController else { return }
-        let vc = factory.makeAuthScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
+        let loginCoordinator = factory.makeLoginFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        loginCoordinator.start()
     }
 }
 
-    // MARK: - Methods
-
-extension AppCoordinator {
-    func showSignInFlow() {
-        guard let navigationController = navigationController else { return }
-        let vc = factory.makeSignInScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    func showSignUpFlow() {
-        guard let navigationController = navigationController else { return }
-        let vc = factory.makeSignUpScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-}
+    // MARK: - Coordinator finish delegate
 
 extension AppCoordinator: CoordinatorFinishDelegate {
     func coordinatorDidFinish(childCoordinator: CoordinatorProtocol) {
@@ -70,10 +58,13 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         case .onBoarding:
             navigationController?.viewControllers.removeAll()
             showAutFlow()
+        case .login:
+            navigationController?.viewControllers.removeAll()
+            showMainFlow()
         case .app:
             return
         default:
-            navigationController?.popViewController(animated: false)
+            navigationController?.popToRootViewController(animated: false)
         }
     }
     

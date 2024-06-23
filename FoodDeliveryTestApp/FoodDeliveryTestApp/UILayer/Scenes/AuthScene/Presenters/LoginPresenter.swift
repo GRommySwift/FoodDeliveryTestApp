@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginViewOutput: AnyObject {
-    func loginStart()
+    func loginStart(login: String, password: String)
     func startRegistration()
     func goToFacebookLogin()
     func goToGoogleLogin()
@@ -20,19 +20,37 @@ protocol LoginViewOutput: AnyObject {
 
 class LoginPresenter {
     
-    private var coordinator: AppCoordinator?
+    private var coordinator: LoginCoordinator?
     weak var viewInput: LoginViewInput?
     
-    init(coordinator: AppCoordinator! = nil, viewInput: LoginViewInput? = nil) {
+    init(coordinator: LoginCoordinator! = nil, viewInput: LoginViewInput? = nil) {
         self.coordinator = coordinator
         self.viewInput = viewInput
     }
     
 }
+private extension LoginPresenter {
+    func goToMainScreen() {
+        coordinator?.finish()
+    }
+}
 
 extension LoginPresenter: LoginViewOutput {
-    func loginStart() {
-        
+    func loginStart(login: String, password: String) {
+        viewInput?.startLoader()
+        if login.lowercased() == "test@mail.com" && password == "1234" {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) {
+                DispatchQueue.main.async {
+                    self.goToMainScreen()
+                }
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                print("Wrong email or pass")
+                self.viewInput?.stopLoader()
+            }
+            
+        }
     }
     
     func startRegistration() {
