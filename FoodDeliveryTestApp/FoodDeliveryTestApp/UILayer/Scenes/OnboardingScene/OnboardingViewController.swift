@@ -40,7 +40,6 @@ class OnboardingViewController: UIViewController {
 
 private extension OnboardingViewController {
     @objc func buttonPressed() {
-        
         switch pageControl.currentPage {
         case 0:
             pageControl.currentPage = 1
@@ -60,7 +59,6 @@ private extension OnboardingViewController {
         default:
             break
         }
-        
     }
 }
 

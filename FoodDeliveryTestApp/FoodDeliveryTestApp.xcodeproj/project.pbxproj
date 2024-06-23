@@ -13,6 +13,7 @@
 		30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */; };
 		30A3F3062BE0FAF200C4079A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3052BE0FAF200C4079A /* Colors.swift */; };
 		30A3F30A2BE1000D00C4079A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F3092BE1000D00C4079A /* Coordinator.swift */; };
+		30A7E6DB2C288A7700DF6CC2 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A7E6DA2C288A7700DF6CC2 /* LoginCoordinator.swift */; };
 		30AC22C82BDFAF2000322749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22C72BDFAF2000322749 /* AppDelegate.swift */; };
 		30AC22CA2BDFAF2000322749 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22C92BDFAF2000322749 /* SceneDelegate.swift */; };
 		30AC22CC2BDFAF2000322749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC22CB2BDFAF2000322749 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		30A3F3032BE0FA2E00C4079A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		30A3F3052BE0FAF200C4079A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		30A3F3092BE1000D00C4079A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30A7E6DA2C288A7700DF6CC2 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		30AC22C42BDFAF2000322749 /* FoodDeliveryTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AC22C72BDFAF2000322749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30AC22C92BDFAF2000322749 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				30A3F3092BE1000D00C4079A /* Coordinator.swift */,
 				30C746152BE25DDE0063C755 /* AppCoordinator.swift */,
+				30A7E6DA2C288A7700DF6CC2 /* LoginCoordinator.swift */,
 				30C746172BE25ECE0063C755 /* OnboardingCoordinator.swift */,
 				30C746192BE26A0E0063C755 /* HomeCoordinator.swift */,
 				30C7461B2BE26A750063C755 /* OrderCoordinator.swift */,
@@ -410,6 +413,7 @@
 				30C746232BE26BA90063C755 /* TabBarController.swift in Sources */,
 				30AF8E6C2BEA872A007CA80D /* LoginPresenter.swift in Sources */,
 				30C7462B2BE27FBD0063C755 /* OnboardingPartViewController.swift in Sources */,
+				30A7E6DB2C288A7700DF6CC2 /* LoginCoordinator.swift in Sources */,
 				309FE5A02BE3E1A40036B62F /* UserStorage.swift in Sources */,
 				309FE5A32BE3E6600036B62F /* SceneFactory.swift in Sources */,
 				30A3F3042BE0FA2E00C4079A /* UIColor+Extension.swift in Sources */,
