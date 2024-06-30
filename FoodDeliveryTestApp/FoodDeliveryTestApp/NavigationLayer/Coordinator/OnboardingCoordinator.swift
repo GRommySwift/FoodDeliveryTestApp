@@ -28,7 +28,7 @@ class OnboardingCoordinator: Coordinator {
 private extension OnboardingCoordinator {
     
     func showOnboarding() {
-        let viewController = factory.makeOnboardingCsene(coordinator: self)
+        let viewController = factory.makeOnboardingScene(coordinator: self)
         navigationController?.pushViewController(viewController, animated: true)
         
     }
