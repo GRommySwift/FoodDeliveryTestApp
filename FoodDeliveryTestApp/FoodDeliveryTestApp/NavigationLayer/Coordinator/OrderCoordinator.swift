@@ -11,7 +11,7 @@ class OrderCoordinator: Coordinator {
     
     override func start() {
         let vc = ViewController()
-        vc.view.backgroundColor = .yellow
+        vc.view.backgroundColor = .white
         navigationController?.pushViewController(vc, animated: true)
     }
     

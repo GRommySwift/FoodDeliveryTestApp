@@ -11,7 +11,7 @@ class ListCoordinator: Coordinator {
     
     override func start() {
         let vc = ViewController()
-        vc.view.backgroundColor = .green
+        vc.view.backgroundColor = .cyan
         navigationController?.pushViewController(vc, animated: true)
     }
     
