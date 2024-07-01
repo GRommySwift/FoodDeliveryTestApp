@@ -356,7 +356,7 @@ private extension LoginViewController {
         case .initial:
             viewOutput.goToSignIn()
         case .signIn:
-            viewOutput.loginStart(login: signInUsername.text ?? "", password: signInPassword.text ?? "")
+            viewOutput.loginStart(login: signInUsername.text?.lowercased() ?? "", password: signInPassword.text ?? "")
         case .signUp:
             return
         }
